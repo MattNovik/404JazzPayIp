@@ -1,7 +1,7 @@
 extends ../components/base/layout
 
 block variables
-  - const title = "404JazzPayOlga" //- на страницах кроме главной используйте О нас — ProjectName
+  - const title = "Ой! Cтраница не найдена" //- на страницах кроме главной используйте О нас — ProjectName
   - const wrapperMods = ""
   - const hasHeader = true
   - const headerMods = ""
@@ -18,6 +18,6 @@ block main
           br
           | страница не найдена
         p.page-container__text мы обязательно разберемся куда она пропала
-        a(href="/").page-container__link
+        button(type="button").page-container__link
           span вернуться в лк
           +icon("icon-arrow", 24, 24)
