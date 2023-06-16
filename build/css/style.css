@@ -699,6 +699,10 @@ button,
   border-radius: 50px;
 }
 
+.page-container__link svg rect {
+  fill: none;
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
