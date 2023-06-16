@@ -1,0 +1,85 @@
+.page-container {
+  font-family: $ff-uni-sans;
+  height: 100%;
+  padding: 75px 15px;
+  min-height: 100vh;
+  background-image: url("../img/content/big.jpg");
+  background-image: image-set(
+    url("../img/content/big.webp") 1x,
+    url("../img/content/big@2x.webp") 2x,
+    url("../img/content/big.jpg") 1x,
+    url("../img/content/big@2x.jpg") 2x
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @include vp-1023 {
+    background-position: 35% center;
+  }
+
+  @include vp-767 {
+    padding: 40px 15px;
+    background-position: 28% center;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+
+  & h1 {
+    background: linear-gradient(90.12deg, #000000 1.06%, #0facd7 99.94%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 77px;
+    margin: 0 0 13px;
+
+    @include vp-767 {
+      font-size: 24px;
+      line-height: 29px;
+    }
+  }
+
+  &__text {
+    font-weight: 250;
+    font-size: 18px;
+    line-height: 24px;
+    margin: 0 0 42px;
+
+    @include vp-767 {
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 19px;
+    width: max-content;
+    min-width: 265px;
+    padding: 22.5px;
+    letter-spacing: 2px;
+    color: $color-default-white;
+    background: #009ace;
+    box-shadow: 0px 0px 0px 5px rgba(255, 255, 255, 0.15),
+      0px 20px 20px rgba(0, 0, 0, 0.2), inset 0px -10px 10px rgba(0, 0, 0, 0.3),
+      inset 0px 10px 10px rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+
+    @include vp-767 {
+      width: 100%;
+    }
+  }
+}
